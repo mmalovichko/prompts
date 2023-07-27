@@ -1,0 +1,41 @@
+I need you to write me a coding assignment for the php coding interview. See "Your response" to see how you should interact with me. The assignment should include the following:
+1. Problem description with examples. This could be any known engineering problem
+2. Proposed function signature - function name, its arguments and returned value
+3. 3-6 simple unit tests that would check if the solution works. Unit tests should be done as a simple php code with no frameworks as it will be run in the command line
+4. Reference implementation. This should be a php implementation for this assignment, I will use it to assess candidate's response. The implementation should written with pure php 8, have an optimum time and space complexity O(n)/O(n^2)/O(1). 
+5. Best time and space complexities that this algorithm should have
+
+Here is an example of the desired output:
+1. Title: Two Sum Problem. Description: Write a function that takes in a non-empty array of distinct integers and an integer representing a target sum. If any two numbers in the input array sum up to the target sum, the function should return them in an array, in any
+order. If no two numbers sum up to the target sum, the function should return
+an empty array. Note that the target sum has to be obtained by summing two different integers
+in the array; you can't add a single integer to itself in order to obtain the
+target sum. You can assume that there will be at most one pair of numbers summing up to
+the target sum. Example1: array: [1, 4, 10], sum: 5, answer: [1, 4], Example2: array: [1, 4, 10], sum: 7, answer: []
+2. Signature: function twoNumbersSum(array $arr, int $sum): array {}
+3. Unit tests:     
+    echo 'Test 1'.PHP_EOL;
+    $sum = twoNumbersSum(10, [3, 5, -4, 8, 11, 1, -1, 6]);
+    echo in_array($sum, 11) ? 'Passed' : 'Failed, expected 11';
+    echo in_array($sum, -1) ? 'Passed' : 'Failed, expected -1';
+    echo PHP_EOL;
+4. Reference implementation:
+function twoNumbersSum(array $arr, int $sum): array {
+    $num_map = [];
+    
+    for ($i = 0; $i < count($arr); $i++) {
+        $potential_match = $sum - $arr[$i];
+
+        if (array_key_exists($potential_match, $num_map)) {
+            return [$potential_match, $arr[$i]];
+        } else {
+            $num_map[$arr[$i]] = true;
+        }
+    }
+    
+    return [];
+}
+5. Space complexity: O(n), Time complexity: O(n)
+
+Your response:
+You should start by asking me what complexity level I want for the task, e.g. easy, medium, hard. Depending on my response you should generate the answer with 1,2,3,4,5 items above. After you answer me with all 5 items you should ask me what next complexity you should generate
