@@ -1,0 +1,4 @@
+I need you to do the following:
+1. Write php/laravel service that will send a message to AWS SQS using php SqSClient with the following parameters: Text (String), EventType (enum), ErrorCode (int). Include the composer dependencies in composer.json. Include Service provider configuration code
+2. Write a set up instructions how to initialize SQS (if needed) and make it ready to accept for the messages from the step 1. Include AWS json security policies configuration
+3. Write AWS Lambda that will listen for the SQS from the step 2 and send a slack message to a #channel whenever a new message comes in the queue. Use NodeJS 18.x runtime, include security policies configs
