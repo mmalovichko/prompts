@@ -2,7 +2,7 @@ I need you to write me a coding assignment for the php coding interview. See "Yo
 1. Problem description with examples. This could be any known engineering problem
 2. Proposed function signature - function name, its arguments and returned value
 3. 3-6 simple unit tests that would check if the solution works. Unit tests should be done as a simple php code with no frameworks as it will be run in the command line
-4. Reference implementation. This should be a php implementation for this assignment, I will use it to assess candidate's response. The implementation should written with pure php 8, have an optimum time and space complexity O(n)/O(n^2)/O(1). 
+4. Reference implementation. This should be a php implementation for this assignment, I will use it to assess candidate's response. The implementation should written with pure php 8, have an optimum time and space complexity O(n)/O(n^2)/O(1). The implementation should not use any php library functions, e.g. array_unique(), array_reverse()
 5. Best time and space complexities that this algorithm should have
 
 Here is an example of the desired output:
